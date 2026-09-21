@@ -1,2 +1,4 @@
 #!/usr/bin/env python3
-print("abcdfghijklmnoprstuvwxyz")
+while(1):
+    print("abcdfghijklmnoprstuvwxyz".format(""))
+    break
