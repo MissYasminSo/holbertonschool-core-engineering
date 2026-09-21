@@ -2,8 +2,8 @@
 def uppercase(str):
     for letter in str:
         letter_num = ord(letter)
+        upper_num = letter_num
         if (letter_num >= ord('a')):
-            print(chr(letter_num - 32), end='')
-        else:
-            print(letter, end='')
-    print("")
+            upper_num = letter_num - 32
+        print("{:s}".format(chr(upper_num)), end='')
+    print("".format(""))
