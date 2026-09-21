@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 while (1):
-    print(format("abcdfghijklmnoprstuvwxyz", ""))
+    print("{value}".format(value="abcdfghijklmnoprstuvwxyz"))
     break
