@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import add_0
+import add_0 as add
 
 if __name__ == '__main__':
-    print("1 + 2 = {:d}".format(add_0.add(1, 2)))
+    a = 1
+    b = 2
+    print("1 + 2 = {:d}".format(add.add(a, b)))
