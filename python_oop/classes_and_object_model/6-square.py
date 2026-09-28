@@ -12,7 +12,7 @@ class Square():
         else:
             self.__size = size
 
-        if len(position) != 2:
+        if len(position) != 2 and len(position) != 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif isinstance(position[0], int) is False or isinstance (position[1], int) is False:
             raise TypeError("position must be a tuple of 2 positive integers")
