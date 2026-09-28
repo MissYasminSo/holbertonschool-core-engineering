@@ -5,7 +5,6 @@
 class Square():
     """Initiate square class with size and position attribute"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
         if isinstance(size, int) is False:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -13,7 +12,12 @@ class Square():
         else:
             self.__size = size
 
-        self.__position = position
+        if isinstance(position[0], int) is False or isinstance (position[1], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = position
 
     def __str__(self):
         result = ""
