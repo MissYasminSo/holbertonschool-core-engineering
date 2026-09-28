@@ -2,6 +2,8 @@
 """Module: Inheritance."""
 
 BaseGeometry = __import__('base_geometry').BaseGeometry
+
+
 class Rectangle(BaseGeometry):
     """Basic Rectangle Class"""
 
