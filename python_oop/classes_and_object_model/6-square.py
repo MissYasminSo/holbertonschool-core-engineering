@@ -6,6 +6,13 @@ class Square():
     """Initiate square class with size and position attribute"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        if isinstance(size, int) is False:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+
         self.__position = position
 
     def __str__(self):
@@ -31,5 +38,16 @@ class Square():
         return self.__position
 
     @position.setter
-    def position(self, size):
+    def position(self, position):
         self.__position = position
+
+    @property
+    def size(self):
+        return self.__size
+
+    @position.setter
+    def position(self, size):
+        self.__size = size
+
+    def area(self):
+        return self.__size * self.__size
