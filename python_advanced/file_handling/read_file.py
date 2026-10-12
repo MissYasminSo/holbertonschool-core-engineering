@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Module: File Handling."""
 
+
 def read_file(filename=""):
     """Read a file"""
 
