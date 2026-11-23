@@ -11,9 +11,10 @@ async def homepage(request):
 
 async def websocket_endpoint(websocket):
     await websocket.accept()
-    message = await websocket.receive_text()
-    if message == "Hello":
-        await websocket.send_text("Hello")
+    while True:
+        message = await websocket.receive_text()
+        if message == "Hello":
+            await websocket.send_text("Hello")
 
 app = Starlette(routes=[
     Route("/", homepage),
