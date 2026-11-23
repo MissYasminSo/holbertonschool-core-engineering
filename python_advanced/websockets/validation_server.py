@@ -13,7 +13,7 @@ async def handler(websocket):
             if len(message.strip()) == 0:
                 await websocket.send("ERR:EMPTY")
             else:
-                await websocket.send(f"OK:{message.strip()}")
+                await websocket.send(f"OK:{message}")
             print(message)
         except ConnectionClosed:
             return
