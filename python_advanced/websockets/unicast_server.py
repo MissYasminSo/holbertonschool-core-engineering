@@ -13,7 +13,7 @@ async def handler(websocket):
 
         try:
             message = await websocket.recv()
-            await websocket.send(message)
+            await websocket.send(f"U:{message}")
         finally:
             connected_clients.remove(websocket)
 
