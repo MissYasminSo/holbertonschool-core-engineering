@@ -12,8 +12,9 @@ async def connect_and_send(url: str, text: str) -> str:
         await websocket.close()
         return message
 
+
 async def main():
-    message = await connect_and_send("ws://localhost:8765", "Hello world!")
+    message = await connect_and_send("ws://localhost:8765", "Hello WebSocket")
     print(message)
 
 
