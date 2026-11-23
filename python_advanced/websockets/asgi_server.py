@@ -13,8 +13,7 @@ async def websocket_endpoint(websocket):
     await websocket.accept()
     while True:
         message = await websocket.receive_text()
-        if message == "Hello":
-            await websocket.send_text("Hello")
+        await websocket.send_text(message)
 
 app = Starlette(routes=[
     Route("/", homepage),
